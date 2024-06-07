@@ -1,0 +1,139 @@
+:root{
+    --colorFuenteHeader:#ffffff;
+    --colorTexto:#ffffff;
+    --backgroundText: #756238;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+
+html, body {
+    
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(/img/backgroundindex.jpg);
+    background-position: sticky;
+    background-size: cover;
+    background-position: absolute;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow:hidden;
+    position: relative;
+    
+    z-index: -1;
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,); /* Color negro con transparencia */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido del body */
+}
+.header{
+    margin:20px ;
+}
+h1,h2{
+    color: var(--colorFuenteHeader);
+    text-transform: uppercase;
+    text-align: center;
+    font: size 36px;
+    font-family: var(--fuente-montserrat);
+    font-optical-sizing: auto;
+    text-shadow: 2px 2px 8px rgb(251, 134, 24);
+    padding: 1%;
+
+    
+}
+p{
+    background:var(--backgroundText);
+    color: var(--colorTexto);
+    opacity: 0.8;
+
+}
+.image_logo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    display: flex;
+    margin-left: 15%;
+
+}
+
+.image_logo img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; /* Transición suave con transform */
+}
+
+.image_logo img:hover {
+    transform: scale(1.2); /* Escala la imagen al 120% */
+}
+.nav-bar{
+    background: var(--colorFuenteHeader);
+    opacity: 0.6;
+    border-radius: 5px;
+}
+.nav-link {
+    color:rgb(27, 16, 90);
+    text-decoration: none;
+}
+.nav-link:hover{
+    border-radius: 10px;
+    opacity: 0.5;
+    border-bottom: 2px solid #ac5c0c;
+    transition: transform 0.1s ease;
+    color:#2e1e47;
+
+}
+.departamentos{
+    gap: 5%;
+}
+.size_img>img,p{
+    border-radius: 10px;
+}
+
+
+.size_img>img{
+    width: 100%;
+    height:auto;
+    object-fit:cover;
+    opacity: 0.9;
+
+} 
+.size_img:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+    z-index: 20;
+    gap: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255, 0.8);
+}
+.departamento_descripcion{
+    margin-top: 20px;
+}
+.footer_informacion {
+    color: #ffffff;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0 auto;
+}
+.icons_footer{
+    width: 25px;
+    height: 25px;
+    margin: 20px;
+    fill: #ffffff;
+    opacity: 0.5;
+}
+.icons:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+    z-index: 20;
+    border-radius: 30%;
+    border: 1px solid rgba(255,255,255, 0.8);
+    background: var(--backgroundText);
+    opacity: 0.7;
+}
