@@ -54,6 +54,9 @@ p{
     opacity: 0.8;
 
 }
+.departamentos > a,p{
+    text-decoration: none;
+}
 .image_logo {
     width: 100px;
     height: 100px;
